@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AJAX</title>
+
+    <link rel="stylesheet" href="styles/main.css" />
+
+    <!-- <script src="scripts/main.js" defer></script> -->
+    <!-- <script src="scripts/localServer.js" defer></script> -->
+    <script src="scripts/weather.js" defer></script>
+  </head>
+
+  <body>
+    <ul class="tabs">
+      <li>
+        <a href="#albums"> Albums </a>
+      </li>
+      <li>
+        <a href="#weather"> Weather </a>
+      </li>
+      <li>
+        <a href="#todos"> Todos </a>
+      </li>
+    </ul>
+    <div class="tab-container">
+      <section id="albums">
+        <h1>Albums</h1>
+      </section>
+
+      <section id="weather">
+        <h1>Current weather in <strong data-weather-city></strong></h1>
+        <img src="" alt="" data-weather-icon />
+        <div data-weather-temp-unit-toggle>
+          <p>Temperature unit:</p>
+          <p>
+            <label>
+              Celsius
+              <input type="radio" name="tempUnit" value="metric" checked />
+            </label>
+          </p>
+          <p>
+            <label>
+              Fahrenheit
+              <input type="radio" name="tempUnit" value="imperial" />
+            </label>
+          </p>
+        </div>
+        <div data-weather-temp-values>
+          <p>
+            Min. <span data-weather-temp="temp_min"></span> / Max.
+            <span data-weather-temp="temp_max"></span>
+          </p>
+          <p>
+            Current temperature
+            <strong data-weather-temp="temp_current"></strong>, feels like
+            <strong data-weather-temp="temp_feels_like"></strong>
+          </p>
+        </div>
+      </section>
+
+      <section id="todos">
+        <h1>Todos</h1>
+        <form data-todo-form action="test.html">
+          <input
+            type="text"
+            name="title"
+            placeholder="What do you want to do?"
+          />
+          <button type="submit">Add</button>
+          <button type="button" data-todo-delete>
+            Delete all checked items
+          </button>
+        </form>
+        <article data-todo-list></article>
+      </section>
+    </div>
+  </body>
+</html>

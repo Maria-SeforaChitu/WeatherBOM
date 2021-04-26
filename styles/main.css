@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+}
+
+#albums {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+#albums h1 {
+  grid-column: 1 / 4;
+}
+
+dl {
+  border: 1px solid #999;
+  margin: 0;
+}
+
+.tabs {
+  display: flex;
+  list-style: none;
+  border-bottom: 1px solid #999;
+  padding: 0;
+}
+
+.tabs li {
+  border-width: 1px 1px 0 1px;
+  border-style: solid;
+  border-color: #999;
+  border-radius: 3px 3px 0 0;
+}
+
+.tabs li + li {
+  border-left: 0;
+}
+
+.tabs a {
+  display: inline-block;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.tab-container {
+  display: flex;
+  width: 100%;
+  scroll-behavior: smooth;
+  overflow-x: scroll;
+}
+
+.tab-container section {
+  flex: 1 0 calc(100vw - 17px);
+}

@@ -1,0 +1,34 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "title": "Our first todo item",
+      "completed": false,
+      "authorId": 1
+    },
+    {
+      "title": "tterersa",
+      "completed": false,
+      "authorId": 1,
+      "id": 4
+    },
+    {
+      "title": "wwwww",
+      "completed": false,
+      "authorId": 1,
+      "id": 6
+    },
+    {
+      "title": "ttt",
+      "completed": false,
+      "authorId": 1,
+      "id": 7
+    }
+  ],
+  "authors": [
+    {
+      "id": 1,
+      "name": "Paul"
+    }
+  ]
+}
